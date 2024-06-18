@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visit from Your Domain</title>
+</head>
+<body>
+    <!-- Step 1: Link to your domain with a specific query parameter -->
+    <a href="https://github.com/jareddarkweb/pocc/?param=test" id="visitLink">Visit your domain</a>
+
+    <!-- Step 2: Once on your domain, redirect to another site -->
+    <script>
+        // Check if the page is loaded from your domain and has the correct query parameter
+        if (window.location.hostname === 'https://github.com/jareddarkweb/pocc' && window.location.search.includes('param=test')) {
+            // Redirect back to the original site with a specific link
+            window.location.href = 'https://render.com/_next/static/chunks/%18test';
+        }
+    </script>
+</body>
+</html>
